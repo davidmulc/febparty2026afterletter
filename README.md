@@ -77,3 +77,23 @@ Disallow: /
 - `robots.txt` and meta robots tags are both enabled.
 - The old AWS backend scaffolding is still in `backend/` but is no longer required for this deployment path.
 - If you later want anti-spam/rate-limit, add a small Vercel serverless function in front of Supabase.
+
+## Admin delete mode (simple password)
+
+You now have an `Admin mode` button in the page UI.
+
+One-time setup in Supabase:
+
+1. Open SQL Editor.
+2. Run:
+   - `supabase/admin_delete.sql`
+3. In that SQL file, replace:
+   - `REPLACE_WITH_BCRYPT_HASH`
+   with a real hash from:
+   - `select crypt('your-long-random-password', gen_salt('bf'));`
+
+After setup:
+
+- Click `Admin mode` in the page.
+- Enter your password.
+- Delete buttons appear beside each memory post.

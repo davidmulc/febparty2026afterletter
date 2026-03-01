@@ -130,6 +130,26 @@ h1 {
   color: #63473a;
 }
 
+.memories-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.admin-toggle {
+  background: #3f2a1e;
+  padding: 0.45rem 0.85rem;
+}
+
+.admin-indicator {
+  margin: 0 0 0.85rem;
+  min-height: 1.2em;
+  color: #6f5548;
+  font-size: 0.9rem;
+}
+
 .composer {
   background: var(--card);
   border: 1px solid var(--line);
@@ -217,9 +237,23 @@ button:disabled {
 }
 
 .memory-meta {
-  margin-top: 0.4rem;
+  margin: 0;
   font-size: 0.8rem;
   color: #765a4b;
+}
+
+.memory-row {
+  margin-top: 0.45rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.delete-btn {
+  background: #7a2520;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.84rem;
 }
 
 .sr-only {

@@ -115,8 +115,12 @@
       </section>
 
       <section class="memories" aria-label="Favorite memory submission">
-        <h2>Drop Your Favorite Memory</h2>
+        <div class="memories-header">
+          <h2>Drop Your Favorite Memory</h2>
+          <button type="button" id="admin-toggle" class="admin-toggle">Admin mode</button>
+        </div>
         <p class="memories-note">Text + emojis only. Keep it kind. Keep it legendary.</p>
+        <p id="admin-indicator" class="admin-indicator" aria-live="polite"></p>
 
         <form id="memory-form" class="composer" autocomplete="off">
           <label for="memory-input" class="sr-only">Write your memory</label>
