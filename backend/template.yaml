@@ -1,0 +1,62 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: February Party memory API
+
+Parameters:
+  AllowedOrigin:
+    Type: String
+    Default: '*'
+    Description: CORS origin for newsletter frontend (set to your S3/CloudFront domain)
+
+Resources:
+  MemoriesTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: pk
+          AttributeType: S
+        - AttributeName: sk
+          AttributeType: S
+      KeySchema:
+        - AttributeName: pk
+          KeyType: HASH
+        - AttributeName: sk
+          KeyType: RANGE
+
+  MemoriesFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: .
+      Handler: src/handler.handler
+      Runtime: nodejs20.x
+      Timeout: 10
+      MemorySize: 256
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref MemoriesTable
+      Environment:
+        Variables:
+          MEMORIES_TABLE: !Ref MemoriesTable
+          ALLOWED_ORIGIN: !Ref AllowedOrigin
+      Events:
+        GetMemories:
+          Type: HttpApi
+          Properties:
+            Path: /memories
+            Method: GET
+        PostMemory:
+          Type: HttpApi
+          Properties:
+            Path: /memories
+            Method: POST
+        OptionsMemories:
+          Type: HttpApi
+          Properties:
+            Path: /memories
+            Method: OPTIONS
+
+Outputs:
+  ApiUrl:
+    Description: Base URL for the memory API
+    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com"

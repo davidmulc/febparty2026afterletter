@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Wine list placeholder">
+  <defs>
+    <linearGradient id="g2" x1="0" x2="1">
+      <stop offset="0" stop-color="#fde7ee"/>
+      <stop offset="1" stop-color="#ffe7c8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#g2)"/>
+  <text x="600" y="350" font-size="48" text-anchor="middle" fill="#6d3d2a" font-family="Arial, sans-serif">Wine List</text>
+</svg>

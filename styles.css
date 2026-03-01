@@ -1,0 +1,250 @@
+:root {
+  --paper: #fffaf1;
+  --ink: #241911;
+  --accent: #b3402f;
+  --accent-soft: #f7d9c9;
+  --card: #fffefb;
+  --line: #e8d3be;
+  --shadow: 0 12px 40px rgba(36, 25, 17, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 20% 20%, #ffd7b4 0%, transparent 30%),
+    radial-gradient(circle at 80% 0%, #f6b8a4 0%, transparent 26%),
+    linear-gradient(165deg, #fff7ee 0%, #fde7d8 55%, #ffe8d9 100%);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.6;
+}
+
+.newsletter-shell {
+  max-width: 860px;
+  margin: 2.5rem auto;
+  padding: 2rem;
+  background: color-mix(in srgb, var(--paper), white 20%);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: "Alegreya", serif;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-top: 0.25rem;
+}
+
+.subhead {
+  margin: 0.5rem 0 0;
+  max-width: 54ch;
+  color: #63473a;
+}
+
+.letter p {
+  margin: 0 0 1.1rem;
+  font-size: 1.04rem;
+}
+
+.inline-photo {
+  margin: 0 0 1.2rem;
+  padding: 0.6rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.inline-photo img {
+  width: 100%;
+  max-height: 560px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #f1dfd0;
+}
+
+.gallery {
+  margin-top: 2.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed var(--line);
+}
+
+.gallery h2,
+.memories h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.4rem, 3.4vw, 2rem);
+}
+
+.gallery figure {
+  margin: 0 0 1.25rem;
+  padding: 1rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.gallery figcaption {
+  margin-bottom: 0.7rem;
+  font-weight: 500;
+}
+
+.gallery img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #f1dfd0;
+}
+
+.memories {
+  margin-top: 2.25rem;
+  padding-top: 1.6rem;
+  border-top: 1px dashed var(--line);
+}
+
+.memories-note {
+  margin: 0 0 1rem;
+  color: #63473a;
+}
+
+.composer {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 0.95rem;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid #e8d5c6;
+  border-radius: 12px;
+  padding: 0.8rem;
+  font: inherit;
+  resize: vertical;
+  min-height: 98px;
+}
+
+textarea:focus {
+  outline: 2px solid color-mix(in srgb, var(--accent), white 55%);
+  outline-offset: 1px;
+}
+
+.composer-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.65rem;
+}
+
+.char-count {
+  margin: 0;
+  color: #6f5548;
+  font-size: 0.9rem;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, #b3402f, #ce6033);
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.05);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.status {
+  margin: 0.65rem 0 0;
+  min-height: 1.3em;
+  color: #6f5548;
+  font-size: 0.92rem;
+}
+
+.feed {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.feed-loading {
+  margin: 0;
+  color: #6f5548;
+}
+
+.memory-item {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.85rem 0.95rem;
+}
+
+.memory-item p {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.memory-meta {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: #765a4b;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .newsletter-shell {
+    margin: 1rem;
+    padding: 1.15rem;
+    border-radius: 18px;
+  }
+
+  .letter p {
+    font-size: 1rem;
+  }
+
+  .composer-actions {
+    gap: 0.8rem;
+  }
+}

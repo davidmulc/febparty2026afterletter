@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <title>February Party Newsletter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="newsletter-shell">
+      <header class="hero">
+        <p class="kicker">Afterletter</p>
+        <h1>February Party 15 (2026)</h1>
+        <p class="subhead">A thank-you note, a memory wall, and a little chaos preserved.</p>
+      </header>
+
+      <article class="letter" aria-label="February Party thank-you message">
+        <p>
+          Thank you all for bringing your beautiful presences to February Party. From the ball gowns,
+          to Neil's dapper waist coat, and Rena in Red's ready-to-party vibe, you all brought the
+          ENERGY that makes a Feb party great. You brought the loud singing, the dancing without a
+          care, the goofy antics, and the livers required to imbibe on some great cocktails.
+        </p>
+
+        <p>
+          Huge thank you to the committee. Rena, David, Kari, Tiffany: this party literally would NOT
+          have been green lit without you all sitting on David's back porch in late Augustish and saying
+          "we'd help you plan that". You are the reason this party happened, and I'm very grateful for
+          your friendship and community give-a-shit!
+        </p>
+
+        <p>
+          The bar would NOT have happened without the metric ton of work that Andy put into setup of the
+          bar and helping with shopping and the like. So many hours. Thank you bro. Shout out to Olivier
+          for being Andy's day-of backup. And of course, the menu only exists thanks to Liz flexing her
+          creative mixology mind into a glass.
+        </p>
+
+<p>
+  Eric, I so appreciated your offer to DJ the party, and to shape it into a mix of music that everyone could enjoy and be excited about. 
+  Thank you!
+</p>
+
+        <p>
+          I always love seeing how fast a mob of hungry adults who've been drinking can devour 11 large
+          pizzas. You didn't disappoint. You are all truly the best kind of animal.
+        </p>
+
+        <p>
+          And thank you for once again proving that Under the Sea is somehow one of the best karaoke songs
+          there is. And how pink pony club is the anthem we all need in our lives every once in awhile.
+          And I'll always remember Brown Sugar and Muffin Man joining forces with the singular Meat Sack to
+          create a tasty Ginuwine meal. God or her equivalents hath put us on this planet for such moments.
+        </p>
+
+        <p>
+          I experienced sympathetic joy seeing Troy receiving his mason jar chalice and Kera's shocked and
+          delighted reaction to it. Troy may you treasure it forever.
+        </p>
+
+        <p>
+          Thank you to Eddie for the $20 donation to Zayin's Warhammer collection. He is very grateful and
+          excited to purchase 1/5 of a warhammer box.
+        </p>
+
+        <p>
+          Some of you drove from Calgary for this and I couldn't more honoured, so thank you you to Dustin
+          &amp; Heidi and Julia &amp; Steven for your presence.
+        </p>
+
+        <p>
+          This is the the prank turkey that had too much to drink that was perched on my toilet. I did not
+          previously own a turkey, meaning someone took the time and attention to ensure that this
+          particular turkey was puking in my toilet. I still don't know who did this, but I'm glad you
+          could help your turkey friend find peace before Easter dinner.
+        </p>
+        <figure class="inline-photo">
+          <img src="images/image4.jpg" alt="Prank turkey perched on toilet" loading="lazy" />
+        </figure>
+
+        
+
+        <p>
+          A big thanks to those of you that rebuilt the pop can tower. It was critical to me continuing my
+          status as a careful curator of pop can art (and hold status as reasonable father). My resume was
+          bolstered last night.
+        </p>
+
+        <p>Also, Andrea: it was NOT a pity invite. 😆</p>
+
+        <p>By the way, you collectively ate 11 pizzas in about 20 minutes.</p>
+      </article>
+
+      <section class="gallery" aria-label="Party photos and lists">
+        <h2>Snapshots</h2>
+        <figure>
+          <figcaption>Here's a shot of the set list and teams names.</figcaption>
+          <img src="images/image2.jpg" alt="Set list and team names" loading="lazy" />
+        </figure>
+        <figure>
+          <figcaption>The wine list</figcaption>
+          <img src="images/image1.jpg" alt="Wine list" loading="lazy" />
+        </figure>
+        <figure>
+          <figcaption>The crafts and puzzles you created</figcaption>
+          <img src="images/image3.jpg" alt="Crafts and puzzles" loading="lazy" />
+        </figure>
+      </section>
+
+      <section class="memories" aria-label="Favorite memory submission">
+        <h2>Drop Your Favorite Memory</h2>
+        <p class="memories-note">Text + emojis only. Keep it kind. Keep it legendary.</p>
+
+        <form id="memory-form" class="composer" autocomplete="off">
+          <label for="memory-input" class="sr-only">Write your memory</label>
+          <textarea
+            id="memory-input"
+            name="memory"
+            maxlength="280"
+            rows="4"
+            placeholder="What moment are you still laughing about?"
+            required
+          ></textarea>
+          <div class="composer-actions">
+            <p id="char-count" class="char-count" aria-live="polite">0/280</p>
+            <button type="submit" id="submit-btn">Post</button>
+          </div>
+          <p id="form-status" class="status" aria-live="polite"></p>
+        </form>
+
+        <div id="memory-feed" class="feed" aria-live="polite" aria-busy="true">
+          <p class="feed-loading">Loading memories...</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
