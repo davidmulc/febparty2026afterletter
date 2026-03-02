@@ -139,6 +139,7 @@ h1 {
 }
 
 .admin-toggle {
+  display: none;
   background: #3f2a1e;
   padding: 0.45rem 0.85rem;
 }
