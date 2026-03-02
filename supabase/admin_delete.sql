@@ -12,9 +12,9 @@ security definer
 set search_path = public
 as $$
 declare
-  stored_hash text := '$2a$06$5MZYA3133o1Jzk5ZfqnV0eK1QFBByPrHnKSVNTib694XIrcr0hSRW';
+  stored_hash text := '$2a$06$nZAP1bIXhmnBuM5te6Y3r.62.uZE9QyHs/3QSvBCzAaVsjZMtNhz.';
 begin
-  if stored_hash = '$2a$06$5MZYA3133o1Jzk5ZfqnV0eK1QFBByPrHnKSVNTib694XIrcr0hSRW' then
+  if stored_hash = '$2a$06$nZAP1bIXhmnBuM5te6Y3r.62.uZE9QyHs/3QSvBCzAaVsjZMtNhz.' then
     return false;
   end if;
 
