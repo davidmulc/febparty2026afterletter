@@ -79,9 +79,9 @@ h1 {
 }
 
 .inline-photo img {
+  display: block;
   width: 100%;
-  max-height: 560px;
-  object-fit: cover;
+  height: auto;
   border-radius: 10px;
   border: 1px solid #f1dfd0;
 }
@@ -112,9 +112,9 @@ h1 {
 }
 
 .gallery img {
+  display: block;
   width: 100%;
-  max-height: 420px;
-  object-fit: cover;
+  height: auto;
   border-radius: 10px;
   border: 1px solid #f1dfd0;
 }
